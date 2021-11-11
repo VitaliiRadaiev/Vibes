@@ -1857,6 +1857,9 @@ textarea {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .footer__links > a {
@@ -1867,10 +1870,6 @@ textarea {
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
-}
-
-.footer__links > a:not(:last-child) {
-  margin-right: 39px;
 }
 
 .checkbox-wrap input[type=checkbox],
@@ -2604,6 +2603,10 @@ textarea {
 }
 
 @media (min-width: 768px) {
+  .footer__links > a:not(:first-child) {
+    margin-left: 39px;
+  }
+
   .our-cars__list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2716,10 +2719,13 @@ textarea {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
 
-  .menu__list > li:not(:last-child) {
-    margin-right: 33px;
+  .menu__list > li:not(:first-child) {
+    margin-left: 33px;
   }
 
   .menu__list > li a:hover {

@@ -161,6 +161,7 @@
         @media (min-width: 992px) {
             display: flex;
             flex-wrap: wrap;    
+            justify-content: flex-end;
         }
 
         & > li {
@@ -172,11 +173,14 @@
             margin: 7px 0;
 
 
+            &:not(:first-child) {
+                @media (min-width: 992px) {
+                    margin-left: 33px;
+                }
+            }
 
             &:not(:last-child) {
-                @media (min-width: 992px) {
-                    margin-right: 33px;
-                }
+
 
                 @media (max-width: $md2+px) {
                     margin-bottom: 30px;
