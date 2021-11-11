@@ -21,6 +21,7 @@
     &__body {
         display: flex;
         align-items: center;
+        justify-content: space-between;
         min-height: 154px;
         padding-top: 15px;
         padding-bottom: 15px;
@@ -59,9 +60,38 @@
         }
     }
 
+    &__left {
+        & .menu__list {
+            justify-content: flex-start;
+            & li {
+                margin-left: 0 !important;
+
+                &:not(:last-child) {
+                    margin-right: 33px;
+
+                    @media (max-width: $md2+px) {
+                        margin-right: 0;
+                        margin-bottom: 10px;
+                    }
+                }
+
+
+                @media (max-width: $md4+px) {
+                    font-size: 12px;
+
+                    & img {
+                        width: 14px;
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+    }
+
+
     &__menu {
         @media (min-width: 992px) {
-            margin-left: 50px;
+            margin-left: 30px;
         }
     }
 

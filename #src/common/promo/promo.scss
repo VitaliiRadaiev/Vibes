@@ -117,4 +117,12 @@
             line-height: 60px;
         }
     }
+
+    &__logo {
+        width: 100%;
+        & img {
+            width: 200px;
+            height: auto;
+        }
+    }
 }

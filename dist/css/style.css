@@ -1706,6 +1706,9 @@ textarea {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   min-height: 154px;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -1728,6 +1731,20 @@ textarea {
 .header__logo img {
   width: 100%;
   height: auto;
+}
+
+.header__left .menu__list {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.header__left .menu__list li {
+  margin-left: 0 !important;
+}
+
+.header__left .menu__list li:not(:last-child) {
+  margin-right: 33px;
 }
 
 .header__burger {
@@ -1959,6 +1976,15 @@ textarea {
   margin-bottom: 0;
   font-family: "DM Serif Display", serif;
   font-weight: 400;
+}
+
+.promo__logo {
+  width: 100%;
+}
+
+.promo__logo img {
+  width: 200px;
+  height: auto;
 }
 
 .our-cars {
@@ -2702,7 +2728,7 @@ textarea {
   }
 
   .header__menu {
-    margin-left: 50px;
+    margin-left: 30px;
   }
 
   .header__burger {
@@ -2888,6 +2914,11 @@ textarea {
 
   .header__logo {
     max-width: 170px;
+  }
+
+  .header__left .menu__list li:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 10px;
   }
 
   .menu {
@@ -3322,5 +3353,16 @@ textarea {
   .our-passion__title.title-2 {
     font-size: 58px;
     line-height: 69px;
+  }
+}
+
+@media (max-width: 479.98px) {
+  .header__left .menu__list li {
+    font-size: 12px;
+  }
+
+  .header__left .menu__list li img {
+    width: 14px;
+    margin-right: 5px;
   }
 }
