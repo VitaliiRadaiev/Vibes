@@ -33,6 +33,8 @@ window.addEventListener('load', function () {
 	@@include('../common/our-passion/our-passion.js');
 	@@include('../common/slider/slider.js');
 	@@include('../common/team/team.js');
+	@@include('../common/side-social/side-social.js');
+	@@include('../common/side-panel/side-panel.js');
 });
 
 window.addEventListener('DOMContentLoaded', function () {

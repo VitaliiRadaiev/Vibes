@@ -121,10 +121,49 @@ defer
 
 	<!-- == // TOP LINE ================== -->
 
+	<div class="side-social">
+		<a href="#" class="side-social__icon">
+			<img class="img-svg" src="img/icons/instagram.svg" alt="">
+		</a>
+		<a href="#" class="side-social__icon">
+			<img class="img-svg" src="img/icons/facebook.svg" alt="">
+		</a>
+		<div class="side-social__label">Follow us</div>
+	</div>
+
+	<div class="side-panel" data-da="menu__scroll-wrap,first,991.98">
+		<div class="side-panel__items">
+			<div class="side-panel__item active" data-id="start">
+				Start
+			</div>
+			<div class="side-panel__item" data-id="01">
+				<span>01</span> <span class="side-panel__title">Unsere Autos</span>
+			</div>
+			<div class="side-panel__item" data-id="02">
+				<span>02</span>  <span class="side-panel__title">Unser
+					Versprechen</span>
+			</div>
+			<div class="side-panel__item" data-id="03">
+				<span>03</span>  <span class="side-panel__title">Unsere Leidenschaft</span>
+			</div>
+			<div class="side-panel__item" data-id="04">
+				<span>04</span>  <span class="side-panel__title">Unser Team</span>
+			</div>
+			<div class="side-panel__item" data-id="05">
+				<span>05</span>  <span class="side-panel__title">Unser Standort</span>
+			</div>
+			<div class="side-panel__item" data-id="06">
+				<span>06</span>  <span class="side-panel__title">Kontaktieren Sie Uns </span>
+			</div>
+		</div>
+		<div class="side-panel__line">
+			<div class="thumb"></div>
+		</div>
+	</div>
 
 	<main class="_page home-page">
 
-		<section class="promo">
+		<section data-id="start" class="promo">
 			<div class="promo__slider">
 				<div class="swiper-container">
 					<div class="swiper-wrapper">
@@ -166,7 +205,7 @@ defer
 			</div>
 		</section>
 
-		<section class="our-cars">
+		<section data-id="01" class="our-cars">
 			<div class="container">
 				<h2 class="our-cars__title title-2">
 					<span class="num">1</span>
@@ -242,7 +281,7 @@ defer
 			</div>
 		</section>
 
-		<section class="our-promise">
+		<section data-id="02" class="our-promise">
 			<div class="container">
 				<h2 class="our-promise__title title-2 mob-small">
 					<span class="num">2</span>
@@ -333,7 +372,7 @@ defer
 			</div>
 		</section>
 
-		<section class="our-passion">
+		<section data-id="03" class="our-passion">
 			<div class="container">
 				<h2 class="our-passion__title title-2 mob-small">
 					<span class="num">3</span>
@@ -419,7 +458,7 @@ defer
 			</div>
 		</section>
 
-		<section class="team">
+		<section data-id="04" class="team">
 			<div class="container">
 				<h2 class="team__title title-2 mob-small">
 					<span class="num">4</span>
@@ -531,7 +570,7 @@ defer
 			</div>
 		</section>
 
-		<section class="location">
+		<section data-id="05" class="location">
 			<div class="container">
 				<h2 class="location__title title-2 mob-small">
 					<span class="num">5</span>
@@ -541,7 +580,7 @@ defer
 			<div class="location__map" id="map"></div>
 		</section>
 
-		<section class="contact">
+		<section data-id="06" class="contact">
 			<div class="container">
 				<h2 class="contact__title title-2 mob-small">
 					<span class="num">6</span>
@@ -568,7 +607,7 @@ defer
 							<img src="img/icons/contact-icon-2.svg" alt="">
 						</div>
 						<div class="contact__label">
-							Schreiben Sie uns eine  E-Mail
+							Schreiben Sie uns eine E-Mail
 						</div>
 						<div class="contact__text">
 							<p><a href="mailto:info@vibesautomobile.ch">info@vibesautomobile.ch</a></p>
@@ -597,7 +636,35 @@ defer
 
 
 	<!-- == FOOTER ================== -->
-	
+	<footer class="footer">
+    <div class="footer__body container">
+        <div class="footer__logo">
+            <a href="#">
+                <img src="img/logo/logo.svg" alt="">
+            </a>
+        </div>
+        <div class="footer__copy">
+            Copyright 2021 Vibes, Inc. Terms & Privacy
+        </div>
+        <div class="footer__links">
+            <a href="#">
+                Imprint
+            </a>
+            <a href="#">
+                Autoscout
+            </a>
+            <a href="#">
+                Cars archive
+            </a>
+            <a href="#">
+                Privacy Policy
+            </a>
+            <a href="#">
+                Language FR
+            </a>
+        </div>
+    </div>
+</footer>
 	<!-- == // FOOTER ================== -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="js/jQueryScripts.min.js"></script>
