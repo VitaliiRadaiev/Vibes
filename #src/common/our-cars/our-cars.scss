@@ -1,0 +1,134 @@
+.our-cars {
+    position: relative;
+    z-index: 2;
+    padding-bottom: 150px;
+
+    @media (max-width: $md3+px) {
+        padding-bottom: 100px;
+    }
+
+    &__title {
+        margin-bottom: 66px;
+    }
+
+    &__subtitle {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        font-weight: bold;
+        font-size: 25px;
+        line-height: 31px;
+        margin-bottom: 70px;
+        & img {
+            margin-bottom: 10px;
+        }
+
+        & a {
+            color: #c4aa79;
+        }
+    }
+
+    &__list {
+        margin: 0 -27px 150px;
+        justify-content: center;
+
+        @media (min-width: 768px) {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 575.98px) {
+            margin-bottom: 0;
+        }
+
+        & > li {
+            padding: 0 27px;
+            flex: 0 1 33.3333%;
+            margin-bottom: 58px;
+
+            @media (max-width: $md2+px) {
+                flex: 0 1 50%;
+                margin-bottom: 90px;
+            }
+        }
+    }
+
+    & .our-cars-contact {
+        @media (max-width: 575.98px) {
+            display: none;
+        }
+    }
+}
+
+.car-card {
+    &__img {
+        padding-bottom: 68.07%;
+        margin-bottom: 112px;
+
+        @media (max-width: $md3+px) {
+            margin-left: -30px;
+            margin-right: -30px;
+            margin-bottom: 101px;
+            padding-bottom: 73.07%;
+        }
+    }
+
+    & .subtitle {
+        margin-bottom: 27px;
+
+        @media (max-width: $md3+px) {
+            margin-bottom: 12px;
+            margin-left: 25px;
+        }
+    }
+
+    &__title {
+        @media (max-width: $md3+px) {
+            margin-left: 25px;
+        }
+    }
+}
+
+.our-cars-contact {
+    text-align: center;
+    &__title {
+        color: $mainColor;
+        margin-bottom: 14px;
+    }
+
+    &__subtitle {
+        color: $mainColor;
+        margin-bottom: 38px;
+    }
+
+    &__links {
+        & a {
+            display: inline-flex;
+            align-items: center;
+            margin: 7px 0;
+            color: $textColor;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+            font-size: 24.1634px;
+            line-height: 1.1666em;
+            font-weight: bold;
+
+            @media (min-width: 992px) {
+                &:hover {
+                    color: $mainColor;
+                }
+            }
+            & img {
+                flex: 0 0 auto;
+                margin-right: 8px;
+                height: 24px;
+                width: auto;
+            }
+
+            &:not(:last-child) {
+                margin-right: 49px;
+            }
+        }
+    }
+}
