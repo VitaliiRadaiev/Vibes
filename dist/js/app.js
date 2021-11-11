@@ -696,12 +696,11 @@ window.addEventListener('DOMContentLoaded', function () {
 
 
 function initMap() {
-
-    map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: 47.450121493270366, lng: 7.8811667412391095},
+    var map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: 47.45015595536321, lng: 7.881198927746594},
         disableDefaultUI: true,
         zoom: 14,
-
+      
         styles: [
             {
               "elementType": "geometry",
@@ -867,7 +866,7 @@ function initMap() {
 
     var marker = new google.maps.Marker({
 
-        position: {lat: 47.450121493270366, lng: 7.8811667412391095},
+        position: {lat: 47.45015595536321, lng: 7.881198927746594},
 
         map: map,
 
