@@ -530,6 +530,62 @@ if(sidePanel) {
 	}
 
 };
+
+
+
+	let mainLink = document.querySelector('.our-cars__subtitle a');
+	if(mainLink) {
+		const setTransform = () => {
+			let num = 5;
+			let top = mainLink.getBoundingClientRect().top;
+			let half = (document.documentElement.clientHeight / 2);
+
+			if(top < document.documentElement.clientHeight && top > 0) {
+				if(top > (document.documentElement.clientHeight / 2)) {
+					let percent = (half - (top - half)) / half * 100;
+					mainLink.style.transform = `scale(1.${(num / 100 * percent).toString().replace('.', '')})`;
+				} else {
+					let percent = (half - (half - top)) / half * 100;
+					mainLink.style.transform = `scale(1.${(num / 100 * percent).toString().replace('.', '')})`;
+				}
+			}
+		}
+		setTransform();
+		window.addEventListener('scroll', setTransform)
+	}
+
+	anime.timeline({
+		easing: 'easeInOutQuad',
+	})
+	.add({
+		targets: '.promo__body',
+		opacity: [0, 1],
+		duration: 600,
+	    delay: 800,
+	})
+	.add({
+		targets:['.side-social'],
+		opacity: [0, 1],
+		duration: 400,
+	})
+	.add({
+		targets:['.side-panel'],
+		opacity: [0, 1],
+		duration: 400,
+	}, '-=400')
+	.add({
+		targets:['.menu__list li'],
+		opacity: [0, 1],
+		translateY: ['-100%', '0%'],
+		delay: (el, i) => 100 * i,
+		duration: 200,
+	})
+
+	let wow = new WOW({
+		boxClass: '_anim',
+		offset: 4,
+	})
+	wow.init();
 });
 
 window.addEventListener('DOMContentLoaded', function () {
