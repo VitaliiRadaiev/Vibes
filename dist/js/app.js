@@ -583,7 +583,7 @@ if(sidePanel) {
 
 	let wow = new WOW({
 		boxClass: '_anim',
-		offset: 4,
+		offset: 7,
 	})
 	wow.init();
 });
@@ -752,8 +752,9 @@ window.addEventListener('DOMContentLoaded', function () {
 
 
 function initMap() {
+
     var map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: 47.45015595536321, lng: 7.881198927746594},
+        center: {lat: 47.451231524170915, lng: 7.881907030571857},
         disableDefaultUI: true,
         zoom: 14,
       
@@ -922,7 +923,7 @@ function initMap() {
 
     var marker = new google.maps.Marker({
 
-        position: {lat: 47.45015595536321, lng: 7.881198927746594},
+        position: {lat: 47.451231524170915, lng: 7.881907030571857},
 
         map: map,
 

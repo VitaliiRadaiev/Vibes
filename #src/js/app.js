@@ -88,7 +88,7 @@ window.addEventListener('load', function () {
 
 	let wow = new WOW({
 		boxClass: '_anim',
-		offset: 4,
+		offset: 7,
 	})
 	wow.init();
 });
