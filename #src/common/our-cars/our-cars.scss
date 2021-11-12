@@ -29,6 +29,27 @@
             color: #c4aa79;
            // transition: all .3s ease;
             display: inline-block;
+            position: relative;
+
+            &:before {
+                position: absolute;
+                content: '';
+                left: 50%;
+                bottom: -10%;
+                width: 0%;
+                height: 3px;
+                background-color: $mainColor;
+                transition: all .3s ease;
+                transform: translateX(-50%);
+            }
+
+            @media (min-width: 992px) {
+                &:hover {
+                    &:before {
+                        width: 100%;
+                    }
+                }
+            }
         }
     }
 

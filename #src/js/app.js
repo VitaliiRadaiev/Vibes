@@ -45,6 +45,10 @@ window.addEventListener('load', function () {
 			let top = mainLink.getBoundingClientRect().top;
 			let half = (document.documentElement.clientHeight / 2);
 
+			if(document.documentElement.clientWidth > 991) {
+				num = 9
+			}
+
 			if(top < document.documentElement.clientHeight && top > 0) {
 				if(top > (document.documentElement.clientHeight / 2)) {
 					let percent = (half - (top - half)) / half * 100;

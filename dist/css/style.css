@@ -5483,7 +5483,7 @@ textarea {
 }
 
 .promo__logo img {
-  width: 200px;
+  width: 300px;
   height: auto;
 }
 
@@ -5522,6 +5522,23 @@ textarea {
 .our-cars__subtitle a {
   color: #c4aa79;
   display: inline-block;
+  position: relative;
+}
+
+.our-cars__subtitle a:before {
+  position: absolute;
+  content: "";
+  left: 50%;
+  bottom: -10%;
+  width: 0%;
+  height: 3px;
+  background-color: #C4AA79;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .our-cars__list {
@@ -6269,6 +6286,10 @@ textarea {
     color: #C4AA79;
   }
 
+  .our-cars__subtitle a:hover:before {
+    width: 100%;
+  }
+
   .our-cars-contact__links a:hover {
     color: #C4AA79;
   }
@@ -6665,6 +6686,10 @@ textarea {
   .promo__title {
     font-size: 60px;
     line-height: 60px;
+  }
+
+  .promo__logo img {
+    width: 200px;
   }
 
   .our-cars {
