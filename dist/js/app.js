@@ -800,9 +800,9 @@ window.addEventListener('DOMContentLoaded', function () {
 
 function initMap() {
     var map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: 47.449802264494146, lng: 7.882904812234071},
+        center: {lat: 47.450002689671024, lng: 7.882030412175249},
         disableDefaultUI: true,
-        zoom: 15,
+        zoom: 14,
       
         styles: [
             {
@@ -969,7 +969,7 @@ function initMap() {
 
     var marker = new google.maps.Marker({
 
-        position: {lat: 47.449802264494146, lng: 7.882904812234071},
+        position: {lat: 47.450002689671024, lng: 7.882030412175249},
 
         map: map,
 
