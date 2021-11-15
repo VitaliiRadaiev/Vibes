@@ -5045,6 +5045,18 @@ textarea {
           animation: zoomInUp2 2s ease forwards;
 }
 
+._anim-items.zoomUp {
+  -webkit-transition: all 2s ease 0.5s;
+  -o-transition: all 2s ease 0.5s;
+  transition: all 2s ease 0.5s;
+}
+
+._anim-items.zoomUp._active {
+  -webkit-transform: scale(1.8);
+      -ms-transform: scale(1.8);
+          transform: scale(1.8);
+}
+
 @-webkit-keyframes zoomIn2 {
   from {
     opacity: 0;
@@ -6646,6 +6658,12 @@ textarea {
 }
 
 @media (max-width: 767.98px) {
+  ._anim-items.zoomUp._active {
+    -webkit-transform: scale(1.5);
+        -ms-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+
   .container {
     padding-left: 30px;
     padding-right: 30px;

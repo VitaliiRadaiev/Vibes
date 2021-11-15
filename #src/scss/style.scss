@@ -166,6 +166,17 @@ textarea {
 			animation: zoomInUp2 2s ease forwards;
 		}
 	}
+
+	&.zoomUp {
+		transition: all 2s ease 0.5s;
+		&._active {
+			transform: scale(1.8);
+
+			@media (max-width: $md3+px) {
+				transform: scale(1.5);
+			}
+		}
+	}
 }
 
 @keyframes zoomIn2 {

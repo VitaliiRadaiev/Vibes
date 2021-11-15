@@ -54,12 +54,11 @@ window.addEventListener('load', function () {
 			if(top < document.documentElement.clientHeight && top > 0) {
 				if(top > (document.documentElement.clientHeight / 2)) {
 					let percent = (half - (top - half)) / half * 100;
-					mainLink.style.transform = `scale(1.${(num / 100 * percent).toString().replace('.', '')})`;
+					//mainLink.style.transform = `scale(1.${(num / 100 * percent).toString().replace('.', '')})`;
 					line.style.width = percent + '%';
-					console.log(percent);
 				} else {
 					let percent = (half - (half - top)) / half * 100;
-					mainLink.style.transform = `scale(1.${(num / 100 * percent).toString().replace('.', '')})`;
+					//mainLink.style.transform = `scale(1.${(num / 100 * percent).toString().replace('.', '')})`;
 					line.style.width = percent + '%';
 				}
 			}
