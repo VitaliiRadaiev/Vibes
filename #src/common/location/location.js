@@ -1,8 +1,8 @@
 function initMap() {
     var map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: 47.45353131734245, lng: 7.884203001278459},
+        center: {lat: 47.449802264494146, lng: 7.882904812234071},
         disableDefaultUI: true,
-        zoom: 14,
+        zoom: 15,
       
         styles: [
             {
@@ -169,14 +169,14 @@ function initMap() {
 
     var marker = new google.maps.Marker({
 
-        position: {lat: 47.45353131734245, lng: 7.884203001278459},
+        position: {lat: 47.449802264494146, lng: 7.882904812234071},
 
         map: map,
 
         title: '',
         label: '',
 
-        icon: 'img/icons/location.svg',
+        icon: 'img/icons/location-3.svg',
     });
 
 }

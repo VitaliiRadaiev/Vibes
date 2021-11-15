@@ -5611,7 +5611,7 @@ textarea {
   position: relative;
 }
 
-.our-cars__subtitle a:before {
+.our-cars__subtitle a span {
   position: absolute;
   content: "";
   left: 50%;
@@ -6370,10 +6370,6 @@ textarea {
 
   .footer__links > a:hover {
     color: #C4AA79;
-  }
-
-  .our-cars__subtitle a:hover:before {
-    width: 100%;
   }
 
   .our-cars-contact__links a:hover {

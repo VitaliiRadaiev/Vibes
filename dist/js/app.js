@@ -535,6 +535,8 @@ if(sidePanel) {
 
 	let mainLink = document.querySelector('.our-cars__subtitle a');
 	if(mainLink) {
+		let line = mainLink.querySelector('span');
+
 		const setTransform = () => {
 			let num = 5;
 			let top = mainLink.getBoundingClientRect().top;
@@ -548,9 +550,12 @@ if(sidePanel) {
 				if(top > (document.documentElement.clientHeight / 2)) {
 					let percent = (half - (top - half)) / half * 100;
 					mainLink.style.transform = `scale(1.${(num / 100 * percent).toString().replace('.', '')})`;
+					line.style.width = percent + '%';
+					console.log(percent);
 				} else {
 					let percent = (half - (half - top)) / half * 100;
 					mainLink.style.transform = `scale(1.${(num / 100 * percent).toString().replace('.', '')})`;
+					line.style.width = percent + '%';
 				}
 			}
 		}
@@ -796,9 +801,9 @@ window.addEventListener('DOMContentLoaded', function () {
 
 function initMap() {
     var map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: 47.45353131734245, lng: 7.884203001278459},
+        center: {lat: 47.449802264494146, lng: 7.882904812234071},
         disableDefaultUI: true,
-        zoom: 14,
+        zoom: 15,
       
         styles: [
             {
@@ -965,14 +970,14 @@ function initMap() {
 
     var marker = new google.maps.Marker({
 
-        position: {lat: 47.45353131734245, lng: 7.884203001278459},
+        position: {lat: 47.449802264494146, lng: 7.882904812234071},
 
         map: map,
 
         title: '',
         label: '',
 
-        icon: 'img/icons/location.svg',
+        icon: 'img/icons/location-3.svg',
     });
 
 };

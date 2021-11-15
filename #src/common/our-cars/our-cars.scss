@@ -31,7 +31,7 @@
             display: inline-block;
             position: relative;
 
-            &:before {
+            & span {
                 position: absolute;
                 content: '';
                 left: 50%;
@@ -43,13 +43,6 @@
                 transform: translateX(-50%);
             }
 
-            @media (min-width: 992px) {
-                &:hover {
-                    &:before {
-                        width: 100%;
-                    }
-                }
-            }
         }
     }
 
