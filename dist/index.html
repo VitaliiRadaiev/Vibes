@@ -85,7 +85,7 @@ defer
                 </li>
                 <li>
                     <img src="img/icons/clock.svg" alt="">
-                    <div><span>Mo.- Fr. 13.30-18.30</span><span>Sa. 10.00-16.00</span></div>
+                    <div><span>Ab 1. Januar : Mo.- Fr. 13.30-18.30</span><span>Sa. 10.00-16.00</span></div>
                 </li>
             </ul>
         </div>
@@ -218,58 +218,60 @@ defer
 					<span class="num _anim fadeIn" data-wow-delay="0.5s">1</span>
 					Unsere Autos
 				</h2>
-				<div class="our-cars__subtitle">
-					<img src="img/photo/our-cars-subtitle.svg" alt="">
-					<a href="#" class="_anim-items zoomUp">
-						www.autoscout24.ch
-						<span></span>
+				<div class="our-cars__subtitle _anim-items zoomUp">
+					<a href="#" class="">
+						<img src="img/photo/our-cars-subtitle.svg" alt="">
 					</a>
 				</div>
-				<ul class="our-cars__list">
-					<li>
-						<div class="car-card">
-							<div class="car-card__img ibg _anim-items zoomIn">
-								<img src="img/photo/car-card-img-1.png" alt="">
+				<div class="our-cars__slider" data-mobile="false">
+					<div class="swiper-container pagination-style">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="car-card">
+									<div class="car-card__img ibg _anim-items zoomIn">
+										<img src="img/photo/car-card-img-1.png" alt="">
+									</div>
+									<div class="subtitle _anim fadeInUp">
+										<span class="num">01</span>
+										STAFF PICKs
+									</div>
+									<h4 class="car-card__title title-4 _anim fadeInUp">
+										McLaren
+									</h4>
+								</div>
 							</div>
-							<div class="subtitle _anim fadeInUp">
-								<span class="num">01</span>
-								STAFF PICKs
+							<div class="swiper-slide">
+								<div class="car-card">
+									<div class="car-card__img ibg _anim-items zoomIn">
+										<img src="img/photo/car-card-img-2.png" alt="">
+									</div>
+									<div class="subtitle _anim fadeInUp">
+										<span class="num">02</span>
+										Best of
+									</div>
+									<h4 class="car-card__title title-4 _anim fadeInUp">
+										Ford Mustang
+									</h4>
+								</div>
 							</div>
-							<h4 class="car-card__title title-4 _anim fadeInUp">
-								McLaren
-							</h4>
+							<div class="swiper-slide">
+								<div class="car-card">
+									<div class="car-card__img ibg _anim-items zoomIn">
+										<img src="img/photo/car-card-img-3.png" alt="">
+									</div>
+									<div class="subtitle _anim fadeInUp">
+										<span class="num">03</span>
+										most liked
+									</div>
+									<h4 class="car-card__title title-4 _anim fadeInUp">
+										BMW Z4
+									</h4>
+								</div>
+							</div>
 						</div>
-					</li>
-					<li>
-						<div class="car-card">
-							<div class="car-card__img ibg _anim-items zoomIn">
-								<img src="img/photo/car-card-img-2.png" alt="">
-							</div>
-							<div class="subtitle _anim fadeInUp">
-								<span class="num">02</span>
-								Best of
-							</div>
-							<h4 class="car-card__title title-4 _anim fadeInUp">
-								Ford Mustang
-							</h4>
-						</div>
-					</li>
-					<li>
-						<div class="car-card">
-							<div class="car-card__img ibg _anim-items zoomIn">
-								<img src="img/photo/car-card-img-3.png" alt="">
-							</div>
-							<div class="subtitle _anim fadeInUp">
-								<span class="num">03</span>
-								most liked
-							</div>
-							<h4 class="car-card__title title-4 _anim fadeInUp">
-								BMW Z4
-							</h4>
-						</div>
-					</li>
-				</ul>
-
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
 				<div class="our-cars-contact">
 					<h3 class="our-cars-contact__title title-3 _anim fadeInUp">
 						Wir kaufen Ihr Auto
@@ -393,17 +395,9 @@ defer
 						<a href="#" class="our-passion__img _anim fadeInUp">
 							<img src="img/photo/our-passion-img-1.jpg" srcset="img/photo/our-passion-img-1.jpg 1x, img/photo/@2x-our-passion-img-1.jpg 2x" alt="">
 						</a>
-						<a href="#" class="our-passion__img _anim fadeInUp">
+						<!-- <a href="#" class="our-passion__img _anim fadeInUp">
 							<img src="img/photo/our-passion-img-2.jpg" srcset="img/photo/our-passion-img-2.jpg 1x, img/photo/@2x-our-passion-img-2.jpg 2x" alt="">
-						</a>
-					</div>
-					<div class="col">
-						<a href="#" class="our-passion__img _anim fadeInUp">
-							<img src="img/photo/our-passion-img-3.jpg" srcset="img/photo/our-passion-img-3.jpg 1x, img/photo/@2x-our-passion-img-3.jpg 2x" alt="">
-						</a>
-						<a href="#" class="our-passion__img _anim fadeInUp">
-							<img src="img/photo/our-passion-img-4.jpg" srcset="img/photo/our-passion-img-4.jpg 1x, img/photo/@2x-our-passion-img-4.jpg 2x" alt="">
-						</a>
+						</a> -->
 						<p class="_anim fadeInUp">Leidenschaft verbindet - Durch unsere Begeisterung für den Motorsport wurde der Grundstein
 							für Vibes Automobile gelegt. Die Kunst des Rennsports besteht darin, niemals sein Ziel aus
 							den Augen zu verlieren, Teamgeist zu bewahren, sowie Emotionen und das Streben nach
@@ -413,6 +407,14 @@ defer
 							einzigartiges Ambiente für unsere Kunden zu schaffen, um uns von Mitstreitern abzuheben.
 						</p>
 					</div>
+					<div class="col">
+						<a href="#" class="our-passion__img _anim fadeInUp">
+							<img src="img/photo/our-passion-img-3.jpg" srcset="img/photo/our-passion-img-3.jpg 1x, img/photo/@2x-our-passion-img-3.jpg 2x" alt="">
+						</a>
+						<a href="#" class="our-passion__img _anim fadeInUp">
+							<img src="img/photo/our-passion-img-4.jpg" srcset="img/photo/our-passion-img-4.jpg 1x, img/photo/@2x-our-passion-img-4.jpg 2x" alt="">
+						</a>
+					</div>
 				</div>
 				<div class="our-passion__mobile">
 					<div class="slider _anim fadeInUp">
@@ -420,6 +422,10 @@ defer
 							<div class="swiper-wrapper">
 								<div class="swiper-slide ibg">
 									<img class="swiper-lazy" data-src="img/photo/our-passion-img-1.jpg" data-srcset="img/photo/our-passion-img-1.jpg 1x, img/photo/@2x-our-passion-img-1.jpg 2x" alt="">
+									<div class="swiper-lazy-preloader"></div>
+								</div>
+								<div class="swiper-slide ibg">
+									<img class="swiper-lazy" data-src="img/photo/our-passion-img-4.jpg" data-srcset="img/photo/our-passion-img-4.jpg 1x, img/photo/@2x-our-passion-img-4.jpg 2x" alt="">
 									<div class="swiper-lazy-preloader"></div>
 								</div>
 								<div class="swiper-slide ibg">
@@ -440,13 +446,10 @@ defer
 							einzigartiges Ambiente für unsere Kunden zu schaffen, um uns von Mitstreitern abzuheben.
 						</p>
 					</div>
-					<div class="slider _anim fadeInUp">
+					<!-- <div class="slider _anim fadeInUp">
 						<div class="swiper-container pagination-style">
 							<div class="swiper-wrapper">
-								<div class="swiper-slide ibg">
-									<img class="swiper-lazy" data-src="img/photo/our-passion-img-2.jpg" data-srcset="img/photo/our-passion-img-2.jpg 1x, img/photo/@2x-our-passion-img-2.jpg 2x" alt="">
-									<div class="swiper-lazy-preloader"></div>
-								</div>
+							
 								<div class="swiper-slide ibg">
 									<img class="swiper-lazy" data-src="img/photo/our-passion-img-4.jpg" data-srcset="img/photo/our-passion-img-4.jpg 1x, img/photo/@2x-our-passion-img-4.jpg 2x" alt="">
 									<div class="swiper-lazy-preloader"></div>
@@ -454,13 +457,13 @@ defer
 							</div>
 							<div class="swiper-pagination"></div>
 						</div>
-					</div>
+					</div> -->
 				</div>
 
 			</div>
 		</section>
 
-		<section data-id="04" class="team">
+		<section  data-id="04" class="team">
 			<div class="container">
 				<h2 class="team__title title-2 mob-small _anim fadeInUp">
 					<span class="num _anim fadeIn" data-wow-delay="0.5s">4</span>
@@ -648,23 +651,35 @@ defer
         <div class="footer__copy">
             Copyright 2021 Vibes, Inc. Terms & Privacy
         </div>
-        <div class="footer__links">
-            <a href="#">
-                Imprint
-            </a>
-            <a href="#">
-                Autoscout
-            </a>
-            <a href="#">
-                Cars archive
-            </a>
-            <a href="#">
-                Privacy Policy
-            </a>
-            <a href="#">
-                Language FR
-            </a>
-        </div>
+        <ul class="footer__links">
+            
+                <li>
+                    <a href="#">
+                        Imprint
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Autoscout
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Cars archive
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Privacy Policy
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Language FR
+                    </a>
+                </li>
+           
+        </ul>
     </div>
 </footer>
 	<!-- == // FOOTER ================== -->

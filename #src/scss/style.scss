@@ -265,6 +265,7 @@ textarea {
 	text-align: center;
 	text-transform: capitalize;
 	position: relative;
+	word-break: break-word;
 
 	@media (max-width: $md3+px) {
 		font-size: 80px;
@@ -363,7 +364,7 @@ textarea {
 		top: 12%;
 
 		@media (max-width: $md3+px) {
-			left: -9px;
+			left: 40px;
 			top: 100%;
 		}
 	}
@@ -384,6 +385,10 @@ textarea {
 		display: flex;
 		align-items: center;
 		justify-content: center;
+
+		&.swiper-pagination-lock {
+			display: none;
+		}
 
 		& .swiper-pagination-bullet {
 			flex: 1 1 auto;
@@ -439,9 +444,31 @@ button.btn-default {
 
 	& h1 {
 	}
+
 	& h2 {
+		font-size: 80px;
+		line-height: 125%;
+		font-family: $titleFontFamily;
+		font-weight: 400;
+		margin-bottom: 0.6em;
+		word-break: break-word;
+	
+		@media (max-width: $md3+px) {
+			font-size: 60px;
+			line-height: 113%;
+		}
 	}
 	& h3 {
+		font-size: 64px;
+		line-height: 1.375em;
+		font-family: $titleFontFamily;
+		font-weight: 400;
+		margin-bottom: 0.6em;
+	
+		@media (max-width: $md3+px) {
+			font-size: 54px;
+			line-height: 1em;
+		}
 	}
 	& h4 {
 	}
@@ -453,6 +480,13 @@ button.btn-default {
 
 	& p {
 		margin-bottom: 1.6em;
+
+		& ~ h2 {
+			margin-top: 1.2em;
+		}
+		& ~ h3 {
+			margin-top: 1.2em;
+		}
 	}
 
 	& ul {
@@ -462,6 +496,15 @@ button.btn-default {
 	}
 
 	& figure {
+	}
+
+	& a {
+		transition: all .3s ease;
+		text-decoration: underline;
+		color: inherit;
+		&:hover {
+			color: $mainColor;
+		}
 	}
 }
 // === and TEXT CONTETN BLOCK ========================================================================
@@ -486,6 +529,7 @@ button.btn-default {
 
 // ==== HOME =====================================================
 @import "pages/home";
+@import "pages/impressum";
 // ==== AND HOME =====================================================
 
 // ==== AND PAGES =====================================================

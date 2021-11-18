@@ -84,6 +84,14 @@
                         margin-right: 5px;
                     }
                 }
+
+                @media (max-width: 575.98px) {
+                    &:last-child {
+                        & > div > span {
+                            display: block;
+                        }
+                    }
+                }
             }
         }
     }

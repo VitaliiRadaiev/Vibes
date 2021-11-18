@@ -14,8 +14,10 @@
                 slidesPerView: 1,
                 spaceBetween: 0,
                 speed: 800,
-                loop: true,
+                loop: slider.querySelector('.swiper-wrapper').children.length <= 1 ? false : true,
                 preloadImages: false,
+                watchOverflow: true,
+                watchSlidesVisibility: true,
                 lazy: {
                     loadPrevNext: true,
                 },

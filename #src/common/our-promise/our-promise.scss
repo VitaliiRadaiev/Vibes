@@ -4,15 +4,15 @@
    position: relative;
    z-index: 3;
     @media (max-width: $md3+px) {
-        padding-top: 100px;
-        padding-bottom: 100px;
+        padding-top: 70px;
+        padding-bottom: 70px;
     }
 
     &__title {
         margin-bottom: 158px;
 
         @media (max-width: $md3+px) {
-            margin-bottom: 155px;
+            margin-bottom: 100px;
         }
 
         @media (min-width: 768px) {

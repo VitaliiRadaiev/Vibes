@@ -389,8 +389,10 @@ function trimString(el, stringLength = 0) {
                 slidesPerView: 1,
                 spaceBetween: 0,
                 speed: 800,
-                loop: true,
+                loop: slider.querySelector('.swiper-wrapper').children.length <= 1 ? false : true,
                 preloadImages: false,
+                watchOverflow: true,
+                watchSlidesVisibility: true,
                 lazy: {
                     loadPrevNext: true,
                 },
@@ -530,6 +532,50 @@ if(sidePanel) {
 	}
 
 };
+	{
+    const slider = document.querySelector('.our-cars__slider');
+    if (slider) {
+        let mySwiper;
+
+        function mobileSlider() {
+            if (document.documentElement.clientWidth <= 767 && slider.dataset.mobile == 'false') {
+                mySwiper = new Swiper(slider.querySelector('.swiper-container'), {
+                    autoplay: {
+                        delay: 6000,
+                        disableOnInteraction: false,
+                    },
+                    slidesPerView: 1,
+                    spaceBetween: 40,
+                    autoHeight: true,
+                    speed: 800,
+                    loop: true,
+                    pagination: {
+                    	el: slider.querySelector('.swiper-pagination'),
+                    	clickable: true,
+                    },
+                });
+
+                slider.dataset.mobile = 'true';
+
+                //mySwiper.slideNext(0);
+            }
+
+            if (document.documentElement.clientWidth > 767) {
+                slider.dataset.mobile = 'false';
+
+                if (slider.classList.contains('swiper-container-initialized')) {
+                    mySwiper.destroy();
+                }
+            }
+        }
+
+        mobileSlider();
+
+        window.addEventListener('resize', () => {
+            mobileSlider();
+        })
+    }
+};
 
 
 
@@ -550,11 +596,11 @@ if(sidePanel) {
 				if(top > (document.documentElement.clientHeight / 2)) {
 					let percent = (half - (top - half)) / half * 100;
 					//mainLink.style.transform = `scale(1.${(num / 100 * percent).toString().replace('.', '')})`;
-					line.style.width = percent + '%';
+					//line.style.width = percent + '%';
 				} else {
 					let percent = (half - (half - top)) / half * 100;
 					//mainLink.style.transform = `scale(1.${(num / 100 * percent).toString().replace('.', '')})`;
-					line.style.width = percent + '%';
+					//line.style.width = percent + '%';
 				}
 			}
 		}
@@ -798,185 +844,185 @@ window.addEventListener('DOMContentLoaded', function () {
 });
 
 
-function initMap() {
-    var map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: 47.450002689671024, lng: 7.882030412175249},
-        disableDefaultUI: true,
-        zoom: 14,
+// function initMap() {
+//     var map = new google.maps.Map(document.getElementById('map'), {
+//         center: {lat: 47.450002689671024, lng: 7.882030412175249},
+//         disableDefaultUI: true,
+//         zoom: 14,
       
-        styles: [
-            {
-              "elementType": "geometry",
-              "stylers": [
-                {
-                  "color": "#242f3e"
-                }
-              ]
-            },
-            {
-              "elementType": "labels.text.fill",
-              "stylers": [
-                {
-                  "color": "#746855"
-                }
-              ]
-            },
-            {
-              "elementType": "labels.text.stroke",
-              "stylers": [
-                {
-                  "color": "#242f3e"
-                }
-              ]
-            },
-            {
-              "featureType": "administrative.locality",
-              "elementType": "labels.text.fill",
-              "stylers": [
-                {
-                  "color": "#d59563"
-                }
-              ]
-            },
-            {
-              "featureType": "poi",
-              "elementType": "labels.text.fill",
-              "stylers": [
-                {
-                  "color": "#d59563"
-                }
-              ]
-            },
-            {
-              "featureType": "poi.park",
-              "elementType": "geometry",
-              "stylers": [
-                {
-                  "color": "#263c3f"
-                }
-              ]
-            },
-            {
-              "featureType": "poi.park",
-              "elementType": "labels.text.fill",
-              "stylers": [
-                {
-                  "color": "#6b9a76"
-                }
-              ]
-            },
-            {
-              "featureType": "road",
-              "elementType": "geometry",
-              "stylers": [
-                {
-                  "color": "#38414e"
-                }
-              ]
-            },
-            {
-              "featureType": "road",
-              "elementType": "geometry.stroke",
-              "stylers": [
-                {
-                  "color": "#212a37"
-                }
-              ]
-            },
-            {
-              "featureType": "road",
-              "elementType": "labels.text.fill",
-              "stylers": [
-                {
-                  "color": "#9ca5b3"
-                }
-              ]
-            },
-            {
-              "featureType": "road.highway",
-              "elementType": "geometry",
-              "stylers": [
-                {
-                  "color": "#746855"
-                }
-              ]
-            },
-            {
-              "featureType": "road.highway",
-              "elementType": "geometry.stroke",
-              "stylers": [
-                {
-                  "color": "#1f2835"
-                }
-              ]
-            },
-            {
-              "featureType": "road.highway",
-              "elementType": "labels.text.fill",
-              "stylers": [
-                {
-                  "color": "#f3d19c"
-                }
-              ]
-            },
-            {
-              "featureType": "transit",
-              "elementType": "geometry",
-              "stylers": [
-                {
-                  "color": "#2f3948"
-                }
-              ]
-            },
-            {
-              "featureType": "transit.station",
-              "elementType": "labels.text.fill",
-              "stylers": [
-                {
-                  "color": "#d59563"
-                }
-              ]
-            },
-            {
-              "featureType": "water",
-              "elementType": "geometry",
-              "stylers": [
-                {
-                  "color": "#17263c"
-                }
-              ]
-            },
-            {
-              "featureType": "water",
-              "elementType": "labels.text.fill",
-              "stylers": [
-                {
-                  "color": "#515c6d"
-                }
-              ]
-            },
-            {
-              "featureType": "water",
-              "elementType": "labels.text.stroke",
-              "stylers": [
-                {
-                  "color": "#17263c"
-                }
-              ]
-            }
-          ]
-    });
+//         styles: [
+//             {
+//               "elementType": "geometry",
+//               "stylers": [
+//                 {
+//                   "color": "#242f3e"
+//                 }
+//               ]
+//             },
+//             {
+//               "elementType": "labels.text.fill",
+//               "stylers": [
+//                 {
+//                   "color": "#746855"
+//                 }
+//               ]
+//             },
+//             {
+//               "elementType": "labels.text.stroke",
+//               "stylers": [
+//                 {
+//                   "color": "#242f3e"
+//                 }
+//               ]
+//             },
+//             {
+//               "featureType": "administrative.locality",
+//               "elementType": "labels.text.fill",
+//               "stylers": [
+//                 {
+//                   "color": "#d59563"
+//                 }
+//               ]
+//             },
+//             {
+//               "featureType": "poi",
+//               "elementType": "labels.text.fill",
+//               "stylers": [
+//                 {
+//                   "color": "#d59563"
+//                 }
+//               ]
+//             },
+//             {
+//               "featureType": "poi.park",
+//               "elementType": "geometry",
+//               "stylers": [
+//                 {
+//                   "color": "#263c3f"
+//                 }
+//               ]
+//             },
+//             {
+//               "featureType": "poi.park",
+//               "elementType": "labels.text.fill",
+//               "stylers": [
+//                 {
+//                   "color": "#6b9a76"
+//                 }
+//               ]
+//             },
+//             {
+//               "featureType": "road",
+//               "elementType": "geometry",
+//               "stylers": [
+//                 {
+//                   "color": "#38414e"
+//                 }
+//               ]
+//             },
+//             {
+//               "featureType": "road",
+//               "elementType": "geometry.stroke",
+//               "stylers": [
+//                 {
+//                   "color": "#212a37"
+//                 }
+//               ]
+//             },
+//             {
+//               "featureType": "road",
+//               "elementType": "labels.text.fill",
+//               "stylers": [
+//                 {
+//                   "color": "#9ca5b3"
+//                 }
+//               ]
+//             },
+//             {
+//               "featureType": "road.highway",
+//               "elementType": "geometry",
+//               "stylers": [
+//                 {
+//                   "color": "#746855"
+//                 }
+//               ]
+//             },
+//             {
+//               "featureType": "road.highway",
+//               "elementType": "geometry.stroke",
+//               "stylers": [
+//                 {
+//                   "color": "#1f2835"
+//                 }
+//               ]
+//             },
+//             {
+//               "featureType": "road.highway",
+//               "elementType": "labels.text.fill",
+//               "stylers": [
+//                 {
+//                   "color": "#f3d19c"
+//                 }
+//               ]
+//             },
+//             {
+//               "featureType": "transit",
+//               "elementType": "geometry",
+//               "stylers": [
+//                 {
+//                   "color": "#2f3948"
+//                 }
+//               ]
+//             },
+//             {
+//               "featureType": "transit.station",
+//               "elementType": "labels.text.fill",
+//               "stylers": [
+//                 {
+//                   "color": "#d59563"
+//                 }
+//               ]
+//             },
+//             {
+//               "featureType": "water",
+//               "elementType": "geometry",
+//               "stylers": [
+//                 {
+//                   "color": "#17263c"
+//                 }
+//               ]
+//             },
+//             {
+//               "featureType": "water",
+//               "elementType": "labels.text.fill",
+//               "stylers": [
+//                 {
+//                   "color": "#515c6d"
+//                 }
+//               ]
+//             },
+//             {
+//               "featureType": "water",
+//               "elementType": "labels.text.stroke",
+//               "stylers": [
+//                 {
+//                   "color": "#17263c"
+//                 }
+//               ]
+//             }
+//           ]
+//     });
 
-    var marker = new google.maps.Marker({
+//     var marker = new google.maps.Marker({
 
-        position: {lat: 47.450002689671024, lng: 7.882030412175249},
+//         position: {lat: 47.450002689671024, lng: 7.882030412175249},
 
-        map: map,
+//         map: map,
 
-        title: '',
-        label: '',
+//         title: '',
+//         label: '',
 
-        icon: 'img/icons/location-3.svg',
-    });
+//        // icon: 'img/icons/location-3.svg',
+//     });
 
-};
+// };

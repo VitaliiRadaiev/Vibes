@@ -4,12 +4,12 @@
     padding-bottom: 150px;
 
     @media (max-width: $md3+px) {
-        padding-bottom: 100px;
-        padding-top: 100px;
+        padding-bottom: 70px;
+        padding-top: 70px;
     }
 
     &__title {
-        margin-bottom: 66px;
+        margin-bottom: 106px;
     }
 
     &__subtitle {
@@ -21,15 +21,27 @@
         font-size: 25px;
         line-height: 31px;
         margin-bottom: 70px;
+
         & img {
             margin-bottom: 10px;
+            width: 110px;
+            height: auto;
+            transition: all .3s ease;
         }
 
         & a {
             color: #c4aa79;
-           // transition: all .3s ease;
+            
             display: inline-block;
             position: relative;
+
+            @media (min-width: 992px) {
+                &:hover {
+                    & img {
+                        transform: scale(1.05);
+                    }
+                }
+            }
 
             & span {
                 position: absolute;
@@ -41,6 +53,37 @@
                 background-color: $mainColor;
                 transition: all .3s ease;
                 transform: translateX(-50%);
+            }
+
+            &:before {
+                position: absolute;
+                content: '';
+                height: 30px;
+                width: 20px;
+                display: block;
+                background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjUiIGhlaWdodD0iMzgiIHZpZXdCb3g9IjAgMCAyNSAzOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTI0LjUyMiAyNC45MzQyTDIyLjM2MjQgMjIuNzc0NEwxMy44IDMxLjMyMDZMMTMuODAxNyAwLjQyNjk2OUwxMC43Mzg0IDAuNDI2OEwxMC43MzY3IDMxLjMyMDRMMi4xOTA0NSAyMi43NThMMC4wMTUzNzI0IDI0LjkzMjhMMTIuMjY4IDM3LjE4NjhMMjQuNTIyIDI0LjkzNDJaIiBmaWxsPSIjQzRBQTc5Ii8+Cjwvc3ZnPgo=");
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+                left: 50%;
+                top: -35px;
+                transform: translateX(-50%);
+                animation: arrowAnim 2s ease infinite;
+            }
+
+            @keyframes arrowAnim {
+                0% {
+                    opacity: 0;
+                    transform: translateX(-50%) translateY(-10px);
+                }
+                50% {
+                    opacity: 1;
+                    transform: translateX(-50%) translateY(0px);
+                }
+                100% {
+                    opacity: 0;
+                    transform: translateX(-50%) translateY(-10px);
+                }
             }
 
         }
@@ -71,6 +114,53 @@
         }
     }
 
+    &__slider {
+        margin-bottom: 150px;
+        @media (min-width: 768px) {
+            & .swiper-container {
+                overflow: visible;
+            }
+
+            & .swiper-wrapper {
+                flex-wrap: wrap;
+                margin: 0 -27px 150px;
+                justify-content: center;
+            }
+
+            & .swiper-slide {
+                padding: 0 27px;
+                flex: 0 1 33.3333%;
+                flex: 0 1 50%;
+                margin-bottom: 90px;
+            }
+        }
+
+        @media (min-width: 992px) {
+            & .swiper-slide {
+                flex: 0 1 33.3333%;
+                margin-bottom: 58px;
+            }
+        }
+
+        @media (max-width: 575.98px) {
+            margin-bottom: 0;
+        }
+
+        @media (max-width: $md3+px) {
+            margin-left: -30px;
+            margin-right: -30px;
+
+            & .swiper-slide {
+                transition: all .4s ease;
+                opacity: 0;
+
+                &.swiper-slide-active {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
     & .our-cars-contact {
         @media (max-width: 575.98px) {
             display: none;
@@ -84,8 +174,6 @@
         margin-bottom: 112px;
 
         @media (max-width: $md3+px) {
-            margin-left: -30px;
-            margin-right: -30px;
             margin-bottom: 101px;
             padding-bottom: 73.07%;
         }

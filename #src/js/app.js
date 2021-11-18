@@ -35,6 +35,7 @@ window.addEventListener('load', function () {
 	@@include('../common/team/team.js');
 	@@include('../common/side-social/side-social.js');
 	@@include('../common/side-panel/side-panel.js');
+	@@include('../common/our-cars/our-cars.js');
 
 
 
@@ -55,11 +56,11 @@ window.addEventListener('load', function () {
 				if(top > (document.documentElement.clientHeight / 2)) {
 					let percent = (half - (top - half)) / half * 100;
 					//mainLink.style.transform = `scale(1.${(num / 100 * percent).toString().replace('.', '')})`;
-					line.style.width = percent + '%';
+					//line.style.width = percent + '%';
 				} else {
 					let percent = (half - (half - top)) / half * 100;
 					//mainLink.style.transform = `scale(1.${(num / 100 * percent).toString().replace('.', '')})`;
-					line.style.width = percent + '%';
+					//line.style.width = percent + '%';
 				}
 			}
 		}
