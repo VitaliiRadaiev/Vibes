@@ -1022,6 +1022,6 @@ function initMap() {
         title: '',
         label: '',
 
-        icon: 'img/icons/location.svg',
+        icon: 'img/icons/location-2.svg',
     });
 };
