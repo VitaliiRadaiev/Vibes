@@ -6062,6 +6062,12 @@ textarea {
   z-index: 1;
 }
 
+.location__map .gm-style [aria-label=Map] > div:first-child > div:nth-child(4) > div:nth-child(2) {
+  -webkit-transform: translate(-56%, 53%);
+      -ms-transform: translate(-56%, 53%);
+          transform: translate(-56%, 53%);
+}
+
 .contact {
   padding-top: 147px;
   padding-bottom: 78px;
@@ -7117,7 +7123,7 @@ textarea {
   }
 
   .location {
-    padding-top: 100px;
+    padding-top: 0px;
     padding-bottom: 70px;
   }
 
