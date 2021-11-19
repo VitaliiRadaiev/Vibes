@@ -5688,7 +5688,6 @@ textarea {
 
 .our-cars__subtitle a:before {
   position: absolute;
-  content: "";
   height: 30px;
   width: 20px;
   display: block;
