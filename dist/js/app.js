@@ -628,7 +628,7 @@ if(sidePanel) {
 		duration: 400,
 	}, '-=400')
 	.add({
-		targets:['.menu__list li'],
+		targets:['.menu__list li', '.header__mobile-phone'],
 		opacity: [0, 1],
 		translateY: ['-100%', '0%'],
 		delay: (el, i) => 100 * i,

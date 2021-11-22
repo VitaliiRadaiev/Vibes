@@ -5402,9 +5402,31 @@ textarea {
   margin-right: 33px;
 }
 
+.header__mobile-phone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1.22em;
+  color: #fff;
+  white-space: nowrap;
+  margin-left: 15px;
+}
+
+.header__mobile-phone img {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  margin-right: 8px;
+}
+
 .header__burger {
   padding: 5px;
-  margin-left: 30px;
+  margin-left: 15px;
   margin-right: -5px;
 }
 
@@ -5684,29 +5706,39 @@ textarea {
   transition: all 0.3s ease;
 }
 
-.our-cars__subtitle a img {
+.our-cars__subtitle a span {
+  position: relative;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
   margin-right: 28px;
-  width: 71px;
-  height: auto;
 }
 
-.our-cars__subtitle a span {
+.our-cars__subtitle a span:before {
   position: absolute;
   content: "";
+  top: 50%;
   left: 50%;
-  bottom: -10%;
-  width: 0%;
-  height: 3px;
-  background-color: #C4AA79;
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: block;
+  border-radius: 50%;
+  height: 30px;
+  width: 50px;
+  z-index: 1;
+  background-color: red;
+  -webkit-box-shadow: 0 0 50px white;
+          box-shadow: 0 0 50px white;
+}
+
+.our-cars__subtitle a img,
+.our-cars__subtitle a svg {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: 71px;
+  height: auto;
 }
 
 .our-cars__subtitle a:after {
@@ -5769,7 +5801,7 @@ textarea {
 }
 
 .our-cars__slider {
-  margin-bottom: 150px;
+  margin-bottom: 100px;
 }
 
 .car-card__img {
@@ -5820,10 +5852,6 @@ textarea {
   margin-right: 8px;
   height: 24px;
   width: auto;
-}
-
-.our-cars-contact__links a:not(:last-child) {
-  margin-right: 49px;
 }
 
 .our-promise {
@@ -6245,6 +6273,12 @@ textarea {
   font-size: 100px;
 }
 
+@media (min-width: 480px) {
+  .our-cars-contact__links a:not(:last-child) {
+    margin-right: 49px;
+  }
+}
+
 @media (min-width: 576px) {
   .promo__slider:before {
     position: absolute;
@@ -6301,7 +6335,7 @@ textarea {
   .our-cars__slider .swiper-wrapper {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin: 0 -27px 150px;
+    margin: 0 -27px 50px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -6405,6 +6439,10 @@ textarea {
 
   .header__menu {
     margin-left: 30px;
+  }
+
+  .header__mobile-phone {
+    display: none;
   }
 
   .header__burger {
@@ -6806,6 +6844,24 @@ textarea {
     max-width: 130px;
   }
 
+  .header__left .menu__list li {
+    font-size: 12px;
+  }
+
+  .header__left .menu__list li img {
+    width: 14px;
+    margin-right: 5px;
+  }
+
+  .header__mobile-phone {
+    font-size: 12px;
+  }
+
+  .header__mobile-phone img {
+    width: 14px;
+    margin-right: 5px;
+  }
+
   .menu {
     padding: 0 30px;
   }
@@ -7072,11 +7128,7 @@ textarea {
   }
 
   .our-cars__slider {
-    margin-bottom: 0;
-  }
-
-  .our-cars .our-cars-contact {
-    display: none;
+    margin-bottom: 50px;
   }
 
   .our-passion__title.title-2 {
@@ -7090,20 +7142,17 @@ textarea {
 }
 
 @media (max-width: 479.98px) {
-  .header__left .menu__list li {
-    font-size: 12px;
-  }
-
-  .header__left .menu__list li img {
-    width: 14px;
-    margin-right: 5px;
-  }
-
   .our-cars__subtitle {
     font-size: 18px;
   }
 
-  .our-cars__subtitle a img {
+  .our-cars__subtitle a span:before {
+    height: 20px;
+    width: 30px;
+  }
+
+  .our-cars__subtitle a img,
+  .our-cars__subtitle a svg {
     width: 50px;
     margin-right: 15px;
   }
@@ -7112,6 +7161,19 @@ textarea {
     margin-left: 15px;
     width: 9px;
     height: 17px;
+  }
+
+  .our-cars-contact__links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 

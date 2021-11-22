@@ -76,7 +76,7 @@
                 }
 
 
-                @media (max-width: $md4+px) {
+                @media (max-width: $md3+px) {
                     font-size: 12px;
 
                     & img {
@@ -103,13 +103,42 @@
         }
     }
 
+    &__mobile-phone {
+        @media (min-width: 992px) {
+            display: none;
+        }
+
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 1.22em;
+        color: #fff;
+        white-space: nowrap;
+        margin-left: 15px;
+
+        & img {
+            flex: 0 0 auto;
+            margin-right: 8px;
+        }
+
+        @media (max-width: $md3+px) {
+            font-size: 12px;
+
+            & img {
+                width: 14px;
+                margin-right: 5px;
+            }
+        }
+    }
+
     &__burger {
         @media (min-width: 992px) {
             display: none;
         }
 
         padding: 5px;
-        margin-left: 30px;
+        margin-left: 15px;
         margin-right: -5px;
         & img {
             width: 24px;
