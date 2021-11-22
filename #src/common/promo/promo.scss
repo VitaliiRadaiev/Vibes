@@ -81,7 +81,8 @@
 
         @media (max-width: $md3+px) {
             text-align: center;
-            min-height: 400px;
+            min-height: 560px;
+            justify-content: flex-end;
         }
 
         & .subtitle {
